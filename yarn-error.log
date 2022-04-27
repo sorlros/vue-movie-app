@@ -1,0 +1,82 @@
+Arguments: 
+  /Users/choi/.nvm/versions/node/v12.14.1/bin/node /Users/choi/.nvm/versions/node/v12.14.1/bin/yarn init
+
+PATH: 
+  /Users/choi/.nvm/versions/node/v12.14.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/choi/.nvm/versions/node/v12.14.1/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  12.14.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/choi/.nvm/versions/node/v12.14.1/lib/node_modules/yarn/lib/cli.js:137143:13)
+      at Interface.emit (events.js:223:5)
+      at Interface._ttyWrite (readline.js:885:16)
+      at ReadStream.onkeypress (readline.js:191:10)
+      at ReadStream.emit (events.js:223:5)
+      at emitKeys (internal/readline/utils.js:433:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1151:36)
+      at ReadStream.emit (events.js:223:5)
+      at addChunk (_stream_readable.js:309:12)
+
+npm manifest: 
+  {
+    "name": "webpack-basic",
+    "version": "1.0.0",
+    "description": "",
+    "__browserslist": "이 프로젝트가 지원하는 대상 브라우저를 지정 for Autoprefixer!",
+    "browserslist": [
+      "> 1%",
+      "last 2 versions"
+    ],
+    "scripts": {
+      "dev": "webpack-dev-server --mode development",
+      "build": "webpack --mode production"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.13.10",
+      "@babel/plugin-transform-runtime": "^7.13.10",
+      "@babel/preset-env": "^7.13.10",
+      "@vue/compiler-sfc": "^3.0.11",
+      "autoprefixer": "^10.2.5",
+      "babel-loader": "^8.2.2",
+      "copy-webpack-plugin": "^8.0.0",
+      "css-loader": "^5.1.3",
+      "file-loader": "^6.2.0",
+      "html-webpack-plugin": "^5.3.1",
+      "postcss": "^8.2.8",
+      "postcss-loader": "^5.2.0",
+      "sass": "^1.32.8",
+      "sass-loader": "^11.0.1",
+      "style-loader": "^2.0.0",
+      "vue-loader": "^16.1.2",
+      "vue-style-loader": "^4.1.3",
+      "webpack": "^5.27.1",
+      "webpack-cli": "^4.5.0",
+      "webpack-dev-server": "^4.0.0-beta.0"
+    },
+    "dependencies": {
+      "axios": "^0.26.1",
+      "bootstrap": "^5.1.3",
+      "lodash": "^4.17.21",
+      "vue": "^3.0.7",
+      "vue-router": "^4.0.14",
+      "vuex": "^4.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
