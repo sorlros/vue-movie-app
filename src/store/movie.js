@@ -73,7 +73,7 @@ export default {
             })
           }
         }
-      } catch(message) {
+      } catch({ message }) {
         commit('updateState', {
           movies: [],
           message
@@ -111,23 +111,24 @@ export default {
   }
 }
 
-function _fetchMovie(payload) {
-  const { title, type, year, page, id } = payload
-  const OMDB_API_KEY = 'a1643a58'
-  const url = id 
-    ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}` 
-    : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
+async function _fetchMovie(payload) {
+    return axios.post('/.netlify/functions/movie', payload)
+  // const { title, type, year, page, id } = payload
+  // const OMDB_API_KEY = 'a1643a58'
+  // const url = id 
+  //   ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}` 
+  //   : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
 
-  return new Promise((resolve, reject) => {
-    axios.get(url)
-      .then(response => {
-        if(response.data.Error) {
-          reject(response.data.Error)
-        }
-        resolve(response)
-      })
-      .catch(error => {
-        reject(error.message)
-      })
-  }) 
+  // return new Promise((resolve, reject) => {
+  //   axios.get(url)
+  //     .then(response => {
+  //       if(response.data.Error) {
+  //         reject(response.data.Error)
+  //       }
+  //       resolve(response)
+  //     })
+  //     .catch(error => {
+  //       reject(error.message)
+  //     })
+  // }) 
 }
